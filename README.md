@@ -39,7 +39,7 @@ for this intent.**
 
 ### Changelog ###
 
-Please see: https://github.com/adrianmmiller/SuperuserListRestore/blob/main/CHANGELOG.md
+Please see: https://github.com/adrianmmiller/SuperuserListRestore/blob/main/changelog.md
 
 
 ### Project Stats ###
