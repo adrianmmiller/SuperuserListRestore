@@ -26,7 +26,7 @@ and one restores ([SuperuserListRestore](https://github.com/adrianmmiller/Superu
 
 1) Make sure /sdcard/SuperUserList.txt exists and contains the packagesyou want to give su to
 
-2) Install MagiskHideDenyRestore module from [Releases section](https://github.com/adrianmmiller/SuperuserListRestore/releases/latest) via Magisk Manager or Fox Module Manager
+2) Install SuperuserListRestore module from [Releases section](https://github.com/adrianmmiller/SuperuserListRestore/releases/latest) via Magisk Manager or Fox Module Manager
 
       This:
 
