@@ -6,24 +6,41 @@ A simple Magisk Module to restore Magisks Superuser list from an existing backup
 
 After explaining that id thought of it plenty of times, but due to my overwhelming fondness for laziness, put it in the Much Later basket, i set about trying to make his Xmas Wish come true...
 
-**PLEASE NOTE:** We (myself, Osm0sis, ipdev and pndwal) all tried to get this backup and restore functionality (along with backup/restore for the magiskhide/deny list - i have modules for that too - see here: [Related Modules](#related-modules)) added natively to Magisk Manager via Magisk's Github, lets just say it was rejected, so here we are...
+**PLEASE NOTE:** 
 
+- We (myself, Osm0sis, ipdev and pndwal) all tried to get this backup and restore functionality (along with backup/restore for the magiskhide/deny list - i have modules for that too - see here: [Related Modules](#related-modules)) added natively to Magisk Manager via Magisk's Github, lets just say it was rejected, so here we are...
+- These/There are **TWO** very discinct modules that work together, one backs up ([SuperuserListBackup](https://github.com/adrianmmiller/SuperuserListBackup)),
+and one restores ([SuperuserListRestore](https://github.com/adrianmmiller/SuperuserListRestore)). You need **BOTH** modules. 
 
-**What it does/How it works:**
+---
 
-- Loads the backup file from the partner SuperuserListBackup module (/storage/emulated/0/SuperUserList.txt)
-- Queries the /data/system/packages.list using the package name from the backup
-- Extract the packages matching UID and formats it
-- Inserts the UID into magisk.db's policies table with common options (permanent grant, logging and notification)
-- Loops until all packages UIDs are in the magisk.db's policies table
+#### **If you havent yet created your backup, please see the [SuperuserListBackup Module Repo](https://github.com/adrianmmiller/SuperuserListBackup) for the partner module to create your backup**
 
-The only active file in the entire module is /common/install.sh, and it is commented.
+---
 
-**Usage:**
+---
 
-- Install via Magisk Manager
+## **SuperuserListRestore Usage:**
+
+---
+
+1) Make sure /sdcard/SuperUserList.txt exists and contains the packagesyou want to give su to
+
+2) Install MagiskHideDenyRestore module from [Releases section](https://github.com/adrianmmiller/SuperuserListRestore/releases/latest) via Magisk Manager or Fox Module Manager
+
+      This:
+
+      - Loads the backup file from the partner SuperuserListBackup module (/storage/emulated/0/SuperUserList.txt)
+      - Queries the /data/system/packages.list using the package name from the backup
+      - Extract the packages matching UID and formats it
+      - Inserts the UID into magisk.db's policies table with common options (permanent grant, logging and notification)
+      - Loops until all packages UIDs are in the magisk.db's policies table
+ 
+3) Reboot
 
 The module will create a logfile (/storage/emulated/0/SuperUserListRestore.log) on install, which mirrors the information onscreen. If you have any issues, you'll need to start by looking there, and by opening an issue on this repo's Issues
+
+The only active file in the entire module is /common/install.sh, and it is commented.
 
 The module will remain installed, unless removed, after the process completes.
 
