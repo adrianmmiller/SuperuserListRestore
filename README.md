@@ -26,7 +26,7 @@ and one restores ([SuperuserListRestore](https://github.com/adrianmmiller/Superu
 
 1) Make sure /sdcard/SuperUserList.txt exists and contains the packages you want to give su to
 
-2) Make sure you have some/all the apps in /sdcard/SuperUserList.txt are present/installed (or restored from backup on new ROM flash - which is what i use this as part of)
+2) Make sure some/all the apps in /sdcard/SuperUserList.txt are present/installed (or restored from backup on new ROM flash - which is what i use this as part of)
 
 3) Install SuperuserListRestore module from [Releases section](https://github.com/adrianmmiller/SuperuserListRestore/releases/latest) via Magisk Manager or Fox Module Manager
 
