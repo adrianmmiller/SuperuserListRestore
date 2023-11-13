@@ -24,9 +24,11 @@ and one restores ([SuperuserListRestore](https://github.com/adrianmmiller/Superu
 
 ---
 
-1) Make sure /sdcard/SuperUserList.txt exists and contains the packagesyou want to give su to
+1) Make sure /sdcard/SuperUserList.txt exists and contains the packages you want to give su to
 
-2) Install SuperuserListRestore module from [Releases section](https://github.com/adrianmmiller/SuperuserListRestore/releases/latest) via Magisk Manager or Fox Module Manager
+2) Make sure you have all the apps in /sdcard/SuperUserList.txt are present/installed (or restored from backup on new ROM flash - which is what i use this as part of)
+
+3) Install SuperuserListRestore module from [Releases section](https://github.com/adrianmmiller/SuperuserListRestore/releases/latest) via Magisk Manager or Fox Module Manager
 
       This:
 
@@ -36,7 +38,7 @@ and one restores ([SuperuserListRestore](https://github.com/adrianmmiller/Superu
       - Inserts the UID into magisk.db's policies table with common options (permanent grant, logging and notification)
       - Loops until all packages UIDs are in the magisk.db's policies table
  
-3) Reboot
+4) Reboot
 
 The module will create a logfile (/storage/emulated/0/SuperUserListRestore.log) on install, which mirrors the information onscreen. If you have any issues, you'll need to start by looking there, and by opening an issue on this repo's Issues
 
